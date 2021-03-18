@@ -1,4 +1,4 @@
-import { CHANGE_INPUT, ADD_LIST, DEL_ITEM, GET_LIST } from './actionTypes'
+import { CHANGE_INPUT, ADD_LIST, DEL_ITEM, GET_LIST, GET_LIST_OTHER } from './actionTypes'
 import axios from 'axios'
 export const changeInputAction = (value) => ({
     type: CHANGE_INPUT,
@@ -14,12 +14,13 @@ export const delItemAction = (index) => ({
     index
 })
 
-export const getListAction = (list) => ({
-    type: GET_LIST,
-    list
-})
+// export const getListAction = (list) => ({
+//     type: GET_LIST,
+//     list
+// })
 
-export const getList = () => {
+export const getListAction = () => {
+    // 使用redux-thunk 返回函数 可进行异步操作
     return (dispatch) => { // 会自动传递dispatch
         // axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res) => {
         //     console.log(res)
@@ -41,3 +42,8 @@ export const getList = () => {
 
     }
 }
+
+export const getListOtherAction = (list) => ({
+    type: GET_LIST_OTHER,
+    list
+})

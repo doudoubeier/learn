@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import store from './store';
-import { changeInputAction, addListAction, delItemAction, getList } from './store/actionCreators'
+import { changeInputAction, addListAction, delItemAction, getListAction, getListOtherAction } from './store/actionCreators'
 import TodoListUI from './TodoListUI'
 
 // const data = [
@@ -73,8 +73,12 @@ class TodoList extends Component {
         //     const action = getListAction(res.data.list)
         //     store.dispatch(action)
         // }, 1000)
-        const action = getList()
-        store.dispatch(action)
+        // redux-thunk
+        // const action = getList()
+        // store.dispatch(action)
+        // redux-saga
+        const action = getListOtherAction();
+        store.dispatch(action);
 
     }
 }
