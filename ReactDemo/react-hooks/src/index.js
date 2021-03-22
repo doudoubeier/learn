@@ -5,4 +5,6 @@ import Old from './Old'
 import Context from './Context'
 import Reducer from './Reducer'
 import PrimaryRedux from './primaryRedux/PrimaryRedux'
-ReactDOM.render(<PrimaryRedux />, document.getElementById('root'))
+import Optimize from './optimize/Optimize'
+import Ref from './Ref'
+ReactDOM.render(<Ref />, document.getElementById('root'))
