@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import { Row, Col, Breadcrumb } from 'antd'
+import { Row, Col, Breadcrumb, Affix } from 'antd'
 import { CalendarOutlined, FolderOpenOutlined, FireOutlined } from '@ant-design/icons'
 import moment from 'moment'
 import ReactMarkDown from 'react-markdown'
 import MarkNav from 'markdown-navbar'
-import 'markdown-navbar/dist/navbar.css
-
-'
+import 'markdown-navbar/dist/navbar.css'
 
 import Header from '../components/Header'
 import Author from '../components/Author'
@@ -99,6 +97,12 @@ const Detail = () => {
                 <Col className="comm-box" xs={0} sm={0} md={7} lg={5} xl={4}>
                     <Author />
                     <Advert />
+                    <Affix offsetTop={5}>
+                        <div className="detail-nav comm-box">
+                            <div className="nav-title">目录</div>
+                            <MarkNav className="article-menu" source={markdown} order={false}></MarkNav>
+                        </div>
+                    </Affix>
                 </Col>
             </Row>
             <Footer />
