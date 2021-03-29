@@ -7,6 +7,7 @@ import Author from '../components/Author'
 import Advert from '../components/Advert'
 import Footer from '../components/Footer'
 import moment from 'moment'
+// import '../static/styles/pages/common.css'
 
 const MyList = () => {
     const [myList, setList] = useState(

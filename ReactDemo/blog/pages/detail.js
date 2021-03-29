@@ -80,7 +80,7 @@ const Detail = () => {
 
                         <div>
                             <div className="detailed-title">
-                                走过路过的，就没放过的
+                                标题
                             </div>
                             <div className="list-icon center">
                                 <span><CalendarOutlined />{time}</span>
